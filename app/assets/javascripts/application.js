@@ -19,5 +19,3 @@
 //= require_self
 //= require ember_todos
 EmberTodos = Ember.Application.create();
-
-//= require_tree .

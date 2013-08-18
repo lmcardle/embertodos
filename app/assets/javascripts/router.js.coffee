@@ -1,3 +1,2 @@
 EmberTodos.Router.map (match)->
-  # match('/').to('index')
-
+  @resource "todos", path: '/'
