@@ -9,3 +9,12 @@ EmberTodos.TodoController = Ember.ObjectController.extend
       model.save()
       value
   ).property('model.isCompleted')
+
+  isEditing: false
+
+  editTodo: ->
+    @set 'isEditing', true
+
+  acceptChanges: ->
+    @set 'isEditing', false
+    @get('model').save()
