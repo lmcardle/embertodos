@@ -18,3 +18,8 @@ EmberTodos.TodoController = Ember.ObjectController.extend
   acceptChanges: ->
     @set 'isEditing', false
     @get('model').save()
+
+  removeTodo: ->
+    todo = @get('model')
+    todo.deleteRecord()
+    todo.save()

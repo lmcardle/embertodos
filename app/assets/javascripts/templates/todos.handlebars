@@ -13,7 +13,8 @@
               {{view EmberTodos.EditTodoView valueBinding="title"}}
             {{else}}
               {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
-              <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button class="destroy"></button>
+              <label {{action "editTodo" on="doubleClick"}}>{{title}}</label>
+              <button class="destroy" {{action "removeTodo"}}></button>
             {{/if}}
           </li>
         {{/each}}
